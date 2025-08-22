@@ -1,5 +1,6 @@
 'use client';
 
+import {ArrowRight, MessageCircleMore, Moon, Sun} from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useEffect, useRef, useState} from 'react';
@@ -43,6 +44,7 @@ export default function Home() {
         <div className="flex flex-col gap-4">
           {['intro', 'connect'].map(section => (
             <button
+              type="button"
               key={section}
               onClick={() =>
                 document
@@ -93,9 +95,8 @@ export default function Home() {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    Disponível para projetos
+                    Disponível - Leiria, PT
                   </div>
-                  <div>Leiria, PT</div>
                 </div>
               </div>
             </div>
@@ -243,19 +244,7 @@ export default function Home() {
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
                     <span className="text-lg">voapah@gmail.com</span>
-                    <svg
-                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
+                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
               </div>
@@ -296,6 +285,12 @@ export default function Home() {
               <div className="text-sm text-muted-foreground">
                 © 2025 VOAPAH. All rights reserved.
               </div>
+              <div className="text-xs text-muted-foreground">
+                Desenvolvido por{' '}
+                <a href="https://devity.pt" target="_blank" rel="noopener">
+                  Devity
+                </a>
+              </div>
             </div>
 
             <div className="flex items-center gap-4">
@@ -303,44 +298,20 @@ export default function Home() {
                 onClick={toggleTheme}
                 className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
                 aria-label="Toggle theme"
+                type="button"
               >
                 {isDark ? (
-                  <svg
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Sun className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
                 ) : (
-                  <svg
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                  </svg>
+                  <Moon className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
                 )}
               </button>
 
-              <button className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300">
-                <svg
-                  className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
+              <button
+                className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
+                type="button"
+              >
+                <MessageCircleMore className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300" />
               </button>
             </div>
           </div>

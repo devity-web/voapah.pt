@@ -9,10 +9,10 @@
     "ignoreUnknown": false,
     "includes": [
       "**/*",
-      "!**/node_modules/**",
-      "!**/dist/**",
-      "!**/build/**",
-      "!**/coverage/**"
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/coverage"
     ]
   },
   "formatter": {
@@ -31,16 +31,8 @@
     "rules": {
       "recommended": true,
       "correctness": {
-        "noUnusedImports": "error"
-      },
-      "style": {
-        "useImportType": "off"
-      },
-      "suspicious": {
-        "noExplicitAny": "off"
-      },
-      "complexity": {
-        "noCommaOperator": "off"
+        "noUnusedImports": "error",
+        "useUniqueElementIds": "off"
       }
     }
   },
