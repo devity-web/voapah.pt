@@ -1,7 +1,6 @@
 'use client';
 
 import {ArrowRight, MessageCircleMore, Moon, Sun} from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import {useEffect, useRef, useState} from 'react';
 
@@ -84,7 +83,7 @@ export default function Home() {
               <div className="space-y-6 max-w-md">
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   Experiências visuais únicas através de filmagens aéreas com
-                  drones. Unindo{' '}
+                  drones. Com{' '}
                   <span className="text-foreground">tecnologia</span>,{' '}
                   <span className="text-foreground">criatividade</span> e{' '}
                   <span className="text-foreground">precisão</span>,
