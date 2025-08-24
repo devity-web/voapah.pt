@@ -241,6 +241,11 @@ export default function Home() {
                     handle: '@voapah.pt',
                     url: 'https://instagram.com/voapah.pt',
                   },
+                  {
+                    name: 'YouTube',
+                    handle: '@voapah',
+                    url: 'https://www.youtube.com/@voapah'
+                  }
                 ].map(social => (
                   <Link
                     key={social.name}
