@@ -160,6 +160,15 @@ export default function Home() {
                     'O Mosteiro da Batalha visto do céu: gótico tardio e manuelino fundem-se num tributo eterno à vitória de Portugal — um Monumento Nacional e Património da Humanidade.',
                   date: 'Agosto 2025',
                   url: 'https://www.youtube.com/watch?v=e_m97P8iS0s',
+                  photo: '/mosteiro.jpg',
+                },
+                {
+                  title: 'Leiria at Night',
+                  excerpt:
+                    'Leiria à noite: a cidade ganha vida sob as estrelas, revelando uma nova dimensão da sua beleza histórica.',
+                  date: 'Agosto 2025',
+                  url: 'https://www.youtube.com/watch?v=gsflbljqz5k',
+                  photo: '/leiria.jpg',
                 },
               ].map(post => (
                 <article
@@ -167,8 +176,9 @@ export default function Home() {
                   className="group p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg relative"
                 >
                   <div
+                    style={{backgroundImage: `url(${post.photo})`}}
                     className={cn(
-                      "absolute rounded-lg inset-0 bg-[url('/mosteiro.jpg')] bg-cover bg-center before:content-[''] before:absolute before:inset-0",
+                      "absolute rounded-lg inset-0 bg-cover bg-center before:content-[''] before:absolute before:inset-0",
                       isDark ? 'before:bg-black/85' : 'before:bg-white/85',
                     )}
                   ></div>
@@ -244,8 +254,8 @@ export default function Home() {
                   {
                     name: 'YouTube',
                     handle: '@voapah',
-                    url: 'https://www.youtube.com/@voapah'
-                  }
+                    url: 'https://www.youtube.com/@voapah',
+                  },
                 ].map(social => (
                   <Link
                     key={social.name}
