@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Voapah - Filmagens com drone',
+  title: 'VOAPAH - Drones',
   description:
     'Filmagens aéreas profissionais com drones em Portugal. Criamos vídeos criativos e de alta qualidade para empresas, eventos e turismo.',
   keywords: ['drone', 'filmagens', 'aéreas', 'Portugal', 'DJI', '4k', 'videografia', 'profissional', 'casamentos', 'eventos', 'obras'],
